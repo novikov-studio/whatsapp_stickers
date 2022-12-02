@@ -122,7 +122,12 @@ public class SwiftWhatsappStickersPlugin: NSObject, FlutterPlugin {
                 return
             }
         }
-            
+         
+        if (!Interoperability.canSend()) {
+            result(FlutterError(code: "GENERAL_ERROR", message: "WhatsApp is not installed on target device!", details: nil))
+            return
+        }
+        
         stickerPack!.sendToWhatsApp {
             completed in
             result(true)

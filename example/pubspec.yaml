@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dio: ^5.8.0+1
+  dio: ^5.9.2
   path_provider: ^2.1.5
   whatsapp_stickers:
     # When depending on this package from a real application you should use:
